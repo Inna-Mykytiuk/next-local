@@ -8,8 +8,8 @@
   },
   "contactForm": {
     "name": "Ім'я",
-    "email": "Email",
-    "message": "Електронна пошта",
+    "email": "Електронна пошта",
+    "message": "Введіть повідомлення",
     "submit": "Надіслати"
   },
   "validation": {

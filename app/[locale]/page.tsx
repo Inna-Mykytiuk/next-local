@@ -7,7 +7,7 @@ export default async function HomePage() {
   return (
     <div>
       <h1>{t('title')}</h1>
-      <Link href="/about">{t('about')}</Link>
+      <Link href='/contact'>{t("contact")}</Link>
     </div>
   );
 }
