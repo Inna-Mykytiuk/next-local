@@ -1,10 +1,13 @@
+import { getTranslations } from 'next-intl/server';
 import { ContactForm } from "@/components/ContactForm";
 
 export default async function ContactPage() {
+  const t = await getTranslations('HomePage');
+
   return (
     <section className='w-full pt-10'>
       <div className='container'>
-        <h1 className='text-2xl font-bold uppercase text-center'>Contact Form</h1>
+        <h1 className='relative z-40 text-2xl font-bold uppercase text-center text-white'>{t('contactFormTitle')}</h1>
         <ContactForm />
       </div>
     </section>

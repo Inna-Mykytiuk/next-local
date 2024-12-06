@@ -33,7 +33,9 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         cardOverlay:
           "linear-gradient(180deg, rgba(0, 0, 0, 0.65) 15.4%, rgba(0, 0, 0, 0.39) 23.9%, rgba(0, 0, 0, 0.00) 34.4%)",
-        checkmark: `url(/icons/checkmark.svg)`,
+        mud: `url(/mud1.png)`,
+        digital: `url(/digital.png)`,
+        pattern: `url(/pattern1.png)`,
         backdrop: `linear-gradient(rgba(41, 41, 41, 0.40),rgba(41, 41, 41, 0.40))`,
         gradient: `linear-gradient(90deg, #9ea7fc 0%, #65b6f7 100%)`,
         backlog:

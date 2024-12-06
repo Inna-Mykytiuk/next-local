@@ -40,7 +40,9 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`relative ${geistSans.variable} ${geistMono.variable} h-screen antialiased overflow-hidden bg-slate-500
+        before:absolute before:bg-pattern before:w-[1000px] before:h-full before:bg-cover before:top-1/2 before:left-1/2 before:transform before:-translate-x-1/2 before:-translate-y-1/2
+        `}
       >
         <NextIntlClientProvider messages={messages}>
           <Navbar />
