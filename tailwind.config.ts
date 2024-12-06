@@ -1,63 +1,75 @@
-import tailwindcssAnimate from "tailwindcss-animate";
 import type { Config } from "tailwindcss";
+import type { PluginAPI } from "tailwindcss/types/config";
 
-export default {
-  darkMode: ["class"],
+const config: Config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./ui/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      sm: "480px",
+      md: "768px",
+      xl: "1280px",
+
+      smOnly: { max: "767.98px" },
+      mdOnly: { min: "768px", max: "1279.98px" },
+      notXL: { max: "1279.98px" },
+    },
     extend: {
-      colors: {
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        chart: {
-          "1": "hsl(var(--chart-1))",
-          "2": "hsl(var(--chart-2))",
-          "3": "hsl(var(--chart-3))",
-          "4": "hsl(var(--chart-4))",
-          "5": "hsl(var(--chart-5))",
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "1rem",
+          sm: "1rem",
+          md: "1.875rem",
+          xl: "1.875rem",
         },
       },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        cardOverlay:
+          "linear-gradient(180deg, rgba(0, 0, 0, 0.65) 15.4%, rgba(0, 0, 0, 0.39) 23.9%, rgba(0, 0, 0, 0.00) 34.4%)",
+        checkmark: `url(/icons/checkmark.svg)`,
+        backdrop: `linear-gradient(rgba(41, 41, 41, 0.40),rgba(41, 41, 41, 0.40))`,
+        gradient: `linear-gradient(90deg, #9ea7fc 0%, #65b6f7 100%)`,
+        backlog:
+          "linear-gradient(#f6f8fc, #f6f8fc), radial-gradient(circle at top left, #c781ff, #e57373)",
+      },
+      boxShadow: {
+        shadow: "0px 10px 24px -15px rgba(0, 0, 0, 0.5)",
+        input: "0px 5px 15px -12px rgba(0, 0, 0, 0.5)",
+        "custom-card": "0px 0px 10px 0px #d2d7e0",
+      },
+
+      fontFamily: {
+        roboto: ["var(--font-roboto)"],
+      },
+      colors: {
+        mainColor: "#707090",
+        unactive: "#b7bec7",
+        mainBcg: "#888fdc",
+        sectionBcg: "#cad9f0",
+        warning: "#f87171",
       },
     },
   },
-  plugins: [tailwindcssAnimate],
-} satisfies Config;
+  plugins: [
+    function ({ addUtilities }: PluginAPI) {
+      const newUtilities = {
+        ".bg-clip-border-box": {
+          "background-clip": "border-box",
+        },
+        ".bg-clip-content-box": {
+          "background-clip": "content-box, border-box",
+        },
+      };
+      addUtilities(newUtilities);
+    },
+  ],
+};
+
+export default config;

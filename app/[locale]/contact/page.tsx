@@ -1,12 +1,13 @@
 import { ContactForm } from "@/components/ContactForm";
-import Link from "next/link";
+
 export default async function ContactPage() {
   return (
-    <div>
-      <h1>Contact</h1>
-      <Link href='/'>Home</Link>
-      <ContactForm />
-    </div>
+    <section className='w-full pt-10'>
+      <div className='container'>
+        <h1 className='text-2xl font-bold uppercase text-center'>Contact Form</h1>
+        <ContactForm />
+      </div>
+    </section>
   );
 }
 

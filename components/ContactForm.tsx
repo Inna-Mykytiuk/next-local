@@ -38,7 +38,7 @@ export function ContactForm() {
   }
 
   return (
-    <div className='min-h-screen flex items-center justify-center p-4'>
+    <div className='flex items-center justify-center p-4'>
       <div className='w-full max-w-md bg-card p-8 rounded-lg shadow-sm'>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>

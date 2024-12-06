@@ -1,10 +1,11 @@
 {
   "HomePage": {
-    "title": "Hello world!",
+    "title": "Hello, world!",
     "welcome": {
       "title": "Welcome to the home page"
     },
-    "contact": "Go to the contact page"
+    "contact": "Contacts",
+    "contactFormTitle": "Contact Form"
   },
   "contactForm": {
     "name": "Name",

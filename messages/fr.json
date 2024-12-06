@@ -4,7 +4,8 @@
     "welcome": {
       "title": "Bienvenue sur la page d'accueil"
     },
-    "contact": "Aller à la page de contact"
+    "contact": "Contacts",
+    "contactFormTitle": "Formulaire de contact"
   },
   "contactForm": {
     "name": "Nom",

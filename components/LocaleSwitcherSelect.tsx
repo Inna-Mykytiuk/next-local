@@ -36,14 +36,14 @@ export default function LocaleSwitcherSelect({ defaultValue, label }: Props) {
   return (
     <Select defaultValue={defaultValue} onValueChange={onSelectChange}>
       <SelectTrigger
-        className='w-[80px] h-8 border-none bg-transparent focus:ring-0 focus:ring-offset-0'
+        className='w-[80px] h-8 border-none bg-transparent focus:ring-0 focus:ring-offset-0 bg-[#f7f7f7]'
         aria-label={label}
       >
-        <SelectValue />
+        <SelectValue className="text-[#555353]" />
       </SelectTrigger>
-      <SelectContent>
+      <SelectContent className="bg-white z-40">
         {routing.locales.map((locale) => (
-          <SelectItem key={locale} value={locale}>
+          <SelectItem key={locale} value={locale} >
             {locale.toUpperCase()}
           </SelectItem>
         ))}
