@@ -49,7 +49,7 @@ export function ContactForm() {
                 <FormItem>
                   <FormLabel>{t("name")}</FormLabel>
                   <FormControl>
-                    <Input placeholder='Your name' {...field} className="w-full rounded-md border border-gray-300 px-4 py-2 shadow-input focus:border-mainBcg focus:slate-500-none bg-slate-500" />
+                    <Input placeholder='Your name' {...field} className="w-full rounded-md border border-gray-300 px-4 py-2 shadow-input focus:border-mainBcg focus:slate-500-none bg-transparent placeholder:text-white" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -66,7 +66,7 @@ export function ContactForm() {
                       placeholder='your.email@example.com'
                       type='email'
                       {...field}
-                      className="w-full rounded-md border border-gray-300 px-4 py-2 shadow-input focus:border-slate-500 focus:outline-non bg-slate-500"
+                      className="w-full rounded-md border border-gray-300 px-4 py-2 shadow-input focus:border-slate-500 focus:outline-non bg-transparent placeholder:text-white"
                     />
                   </FormControl>
                   <FormMessage />
@@ -82,7 +82,7 @@ export function ContactForm() {
                   <FormControl>
                     <Textarea
                       placeholder='Type your message here...'
-                      className='resize-none w-full rounded-md border border-gray-300 px-4 py-2 shadow-input focus:border-slate-500 focus:outline-none bg-slate-500'
+                      className='resize-none w-full rounded-md border border-gray-300 px-4 py-2 shadow-input focus:border-slate-500 focus:outline-none bg-transparent placeholder:text-white'
                       {...field}
                     />
                   </FormControl>
@@ -90,7 +90,7 @@ export function ContactForm() {
                 </FormItem>
               )}
             />
-            <Button type='submit' className="flex bg-slate-500 text-white hover:bg-white hover:text-slate-500 mx-auto transition-all duration-300 ease-in-out">{t("submit")}</Button>
+            <Button type='submit' className="flex border-solid border-[1px] border-white text-white hover:bg-white hover:text-slate-500 mx-auto transition-all duration-300 ease-in-out">{t("submit")}</Button>
           </form>
         </Form>
       </div>

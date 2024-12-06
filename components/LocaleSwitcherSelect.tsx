@@ -19,9 +19,9 @@ type Props = {
 
 export default function LocaleSwitcherSelect({ defaultValue, label }: Props) {
   const router = useRouter();
-
   const pathname = usePathname();
   const params = useParams();
+
 
   function onSelectChange(nextLocale: string) {
     router.replace(

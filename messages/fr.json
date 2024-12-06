@@ -1,5 +1,6 @@
 {
   "HomePage": {
+    "homeLink": "Maison",
     "title": "Bonjour!",
     "welcome": {
       "title": "Bienvenue sur la page d'accueil"
