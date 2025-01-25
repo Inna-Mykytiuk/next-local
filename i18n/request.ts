@@ -10,8 +10,19 @@ export default getRequestConfig(async ({ requestLocale }) => {
     locale = routing.defaultLocale;
   }
 
+  // Імпортуємо різні JSON файли
+  const commonMessages = (await import(`@/locales/${locale}/${locale}.json`))
+    .default;
+  const homeMessages = (await import(`@/locales/${locale}/home.json`)).default;
+
+  // Об'єднуємо повідомлення в один об'єкт
+  const messages = {
+    ...commonMessages,
+    ...homeMessages,
+  };
+
   return {
     locale,
-    messages: (await import(`@/messages/${locale}.json`)).default,
+    messages,
   };
 });

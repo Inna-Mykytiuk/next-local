@@ -1,11 +1,11 @@
-import Navbar from "@/components/NavBar";
-import { Locale, routing } from "@/i18n/routing";
 import type { Metadata } from "next";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
 import localFont from "next/font/local";
 import { notFound } from "next/navigation";
+import { getMessages } from "next-intl/server";
+import { Locale, routing } from "@/i18n/routing";
+import { NextIntlClientProvider } from "next-intl";
 import "./globals.css";
+import Navbar from "@/components/NavBar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -36,7 +36,7 @@ export default async function RootLayout({
   }
   // Providing all messages to the client
   // side is the easiest way to get started
-  const messages = await getMessages();
+  const locales = await getMessages();
   return (
     <html lang={locale}>
       <body
@@ -44,7 +44,7 @@ export default async function RootLayout({
         before:absolute before:bg-pattern before:w-[1000px] before:h-full before:bg-cover before:top-1/2 before:left-1/2 before:transform before:-translate-x-1/2 before:-translate-y-1/2
         `}
       >
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider messages={locales}>
           <Navbar />
           {children}
         </NextIntlClientProvider>
