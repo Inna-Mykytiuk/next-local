@@ -1,12 +1,13 @@
 {
-  "HomePage": {
+  "common": {
     "homeLink": "Maison",
     "title": "Bonjour!",
     "welcome": {
       "title": "Bienvenue sur la page d'accueil"
     },
     "contact": "Contacts",
-    "contactFormTitle": "Formulaire de contact"
+    "contactFormTitle": "Formulaire de contact",
+    "categories": "Categories"
   },
   "contactForm": {
     "name": "Nom",

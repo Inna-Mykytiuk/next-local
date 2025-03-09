@@ -1,12 +1,13 @@
 {
-  "HomePage": {
+  "common": {
     "homeLink": "Додому",
     "title": "Привіт, світ!",
     "welcome": {
       "title": "Ласкаво просимо на домашню сторінку"
     },
     "contact": "Контакти",
-    "contactFormTitle": "Форма для контакту"
+    "contactFormTitle": "Форма для контакту",
+    "categories": "Категорії"
   },
   "contactForm": {
     "name": "Ім'я",

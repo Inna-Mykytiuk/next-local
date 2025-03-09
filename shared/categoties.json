@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name_uk": "Овочі",
+    "name_en": "Vegetables"
+  },
+  {
+    "id": 2,
+    "name_uk": "Фрукти",
+    "name_en": "Fruits"
+  },
+  {
+    "id": 3,
+    "name_uk": "М'ясо",
+    "name_en": "Meat"
+  }
+]
